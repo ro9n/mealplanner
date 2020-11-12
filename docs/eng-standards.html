@@ -1,0 +1,214 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Chaldal Engineering Take-home Spec</title>
+
+        <style>
+            * {
+                font-family: Sans-serif;
+                color:     #444444;
+            }
+
+            p {
+                line-height: 1.3em;
+            }
+
+            p.secondary {
+                font-size: 80%;
+                color:   #999;
+            }
+
+            ul li {
+                margin:      0.7em 0;
+                line-height: 1.3em;
+            }
+
+            h1 {
+                color: #666;
+            }
+
+            h1.title {
+                font-size: 48px;
+                color: #222;
+            }
+
+            h2 {
+                color: #31b359;
+            }
+
+            body {
+                max-width: 600px;
+                margin:    0 auto;
+            }
+
+            code {
+                font-family:      Monospace;
+                background-color: #f0f0f0;
+                padding:          0.3em 0.6em;
+            }
+
+            code.block {
+                display: block;
+                padding: 10px;
+                margin:  0.7em 0;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1 class="title">Chaldal Engineering Standards</h1>
+
+        <h1>OVERVIEW</h1>
+        At Chaldal we strive to produce high quality engineering work. This is merely a means. The end to which we employ this means is achieving business objectives. By “strive”, we mean that we may not necessarily be there yet, and each individual engineer’s level may be different, but we are actively, consciously working on getting there, and hold ourselves accountable to these standards.
+        A Chaldal engineer is constantly thinking and meta-thinking.
+        Our recruiting process is designed to evaluate the candidate on these criteria. The way this is achieved is sometimes subtle, but we make it a point to share our evaluation criteria with candidates, for these traits are far more difficult to fake than to actually have.
+        <h1>PERSONALITY CRITERIA</h1>
+        </p>
+
+        <h2>Communication/Empathy</h2>
+        <p>
+            A Chaldal Engineer knows how to read. Really read, think into the consequences and implications of what’s written, analyze what is missing or is left unsaid. They can follow written instructions precisely, proactively ask for clarifications, are aware of the assumptions they are making, and state them explicitly.
+        </p>
+        <p>
+            A Chaldal Engineer knows how to write. Not in sentence fragments or bullet points, but in organized sentences and paragraphs. They realize that writing is a tool for cleaning up and streamlining their thinking process. They are aware that reading and writing is highly contextual, and proactively share necessary context based on the expected reader.
+        </p>
+        <p>
+            <strong>Antonyms:</strong> presumption, sloppiness
+        </p>
+
+        <h2>Curiosity</h2>
+        <p>
+            A Chaldal Engineer is curious about technology and the world around them. They love knowing how things work. They are not happy with “a solution”, they always want to know “the best solution” [1] They are unafraid to crack open a library and look at the implementation. When somebody offers a better solution, they feel the urge to know and understand every detail of it.
+        </p>
+        <p>
+            They readily and proactively explore existing code and libraries to know what tools are available, thus avoiding reinventing the wheel. They contribute library functions when appropriate, instead of keeping them local to the code they are writing at the moment.
+        </p>
+        <p>
+            <strong>Antonyms:</strong> apathy, disinterest
+        </p>
+        <p>
+            [1] Whether they choose to implement it or not is decided based on ROI, but knowing what the ideal solution, and choosing to implement a less than ideal one, must be a conscious choice.
+        </p>
+
+        <h2>Perseverance</h2>
+        <p>
+            A Chaldal Engineer can work through a problem despite difficulty, initial lack of success, or repeated failure. They don’t settle on a half-hearted solution, and achieve what they set out to do. “Good enough” is never good enough [1]. They take pride in their work, never aim for merely “working”, and refactor mercilessly [2] to eradicate incidental complexity from the code base.
+        </p>
+        <p>
+            <strong>Antonyms:</strong> laziness, mediocrity, giving up easily
+        </p>
+        <p>
+            [1] This is different from the case where “this solution is not ideal but is suitable for the time being given ROI constraints”, which is a conscious, careful decision.
+        </p>
+        <p>
+            [2] Adjusted for retest footprint given the current dev cycle, etc
+        </p>
+
+        <h2>Thinks Constantly</h2>
+        <p>
+            A Chaldal Engineer thinks constantly, questions assumptions, and analyzes from first principles. They don’t accept orders, guidelines, or “best practices” from authority without thinking through and understanding the reasons and history underlying them.
+        </p>
+        <p>
+            They can switch perspectives at will and see the problem from a low level implementation, high level systemic, business, usability, and other perspectives, and decide on correct tradeoffs given the circumstances.
+        </p>
+        <p>
+            <strong>Antonyms:</strong> tunnel vision, lazy, shortsighted, defers to authority
+        </p>
+
+        <h2>Learn Fearlessly</h2>
+        <p>
+            A Chaldal Engineer understands that programming involves learning new things every day. They are ready to pick up a new way of doing things, or a new technology, and keep their mind malleable and flexible. [1]
+        </p>
+        <p>
+            <strong>Antonyms:</strong> set in their ways, comfortable, uninterested in growth, stubborn
+        </p>
+        <p>
+            [1] This doesn’t mean they mindlessly adopt every new and shiny technology. They are discerning about real pros and cons of any technology, and are wary of superficial fashion and marketing.
+        </p>
+
+        <h2>Internalize Feedback Quickly</h2>
+        <p>
+            A Chaldal Engineer is always looking to improve and grow. Feedback, irrespective of the source, is always taken openly and considered carefully. If a disagreement arises, it is discussed until agreement is reached. When in agreement, feedback is internalized quickly, and new improved habits are formed.
+        </p>
+        <p>
+            <strong>Antonyms:</strong> arrogant, stubborn, hides disagreement, agrees but does not follow through
+        </p>
+
+        <h2>Autonomy and Ownership</h2>
+        <p>
+            A Chaldal Engineer is autonomous, they find solutions to their problems, and they get things done. They have a strong sense of ownership towards their work. The entire code base is their code base, the product is their product, and they proactively improve them where improvements are necessary, irrespective of who originally wrote the code or made product design decisions [1].
+        </p>
+        <p>
+            They also know when to not go down a rabbit hole, and ask for help or guidance or clarification, and how to get unblocked.
+        </p>
+        <p>
+            <strong>Antonyms:</strong> lazy, lethargic, points fingers, turns a blind eye, defers to authority
+        </p>
+        <p>
+            [1] Adjusted for Chesterton’s Fence
+        </p>
+
+        <h2>Introspection</h2>
+        <p>
+            The key to personal growth is introspection. A Chaldal Engineer hones their introspection skills, and learns to in tune with themselves, thus bootstrapping their growth to higher and higher levels. They practice what they preach.
+        </p>
+        <p>
+            <strong>Antonyms:</strong> lacking self-awareness, hypocrisy
+        </p>
+
+        <h1>CODING SKILLS CRITERIA</h1>
+
+
+        <h2>Problem Analysis and Solution Correctness</h2>
+        <p>
+            There may be many ways to go about solving a programming problem, but when all related concerns are taken into consideration, typically there is only one truly correct solution that maximally satisfies all these concerns.
+        </p>
+        <p>
+            When analyzing a problem, a Chaldal Engineer can correctly consider concerns like performance, security, clean modelling, readability, end user usability, code reusability, testability, and craft a solution that maximally satisfies all these concerns. They perform analysis of the problem at hand, distill its essence, and choose the data structures, types, algorithms, and coding style, that match the inherent complexity of the problem while minimizing incidental complexity of the implementation, and use them to implement the correct solution.
+        </p>
+        <p>
+            <strong>Antonyms:</strong> incorrect, inefficient, wasteful, poorly modelled, high inherent complexity, using a cannon to kill a mosquito
+        </p>
+
+        <h2>Communication</h2>
+        <p>
+            A Chaldal Engineer considers coding an act of communication — to the current themselves, to the future themselves, to other team members. As such, all code is written with focus on readability and ease of understanding. A variety of highly positive side effects arise from this. This applies to formatting, naming of files, values, functions, classes, objects, order of code in a file, directory structure, control flow.
+        </p>
+        <p>
+            <strong>Antonyms:</strong> hard to follow, unclear, confusing, unnecessarily complex
+        </p>
+
+        <h2>Naming</h2>
+        <p>
+            A Chaldal Engineer realizes that naming things correctly has the highest ROI of any code-writing effort they can make. Choosing an appropriate name for a thing forces one to carefully consider what the thing really is, its essence, and doing so has a side effect of crystallizing and streamlining one’s thinking. The Chaldal Engineer names all the things to maximize readability for expected readers, with awareness for their and the surrounding/calling code’s context.
+        </p>
+        <p>
+            <strong>Antonyms:</strong> poorly named, confusingly named, meaninglessly named, misnamed, misleadingly named
+        </p>
+
+        <h2>Neatness</h2>
+        <p>
+            A Chaldal Engineer writes their code neatly. All white space and other formatting is clean and consistent, either with a style guide, or at least internally consistent. Better yet, in the absence of a style guide, the Chaldal Engineer creates one to adhere to, instead of adhering to something merely in their head. Just like syntax highlighting decreases mental overhead of reading code, so does neat and consistent formatting. Just like syntax highlighting brings out hidden structure in code and makes your brain unconsciously aware of it, so does neat and consistent formatting.
+        </p>
+        <p>
+            <strong>Antonyms:</strong> inconsistent, sloppy, ad hoc, dense, hard-to-parse
+        </p>
+
+        <h2>Functional/Immutable</h2>
+        <p>
+            Functional and Immutable programming paradigms allow one to avoid large classes of bugs, and in this day and age should be considered the de facto standard for building software. The Chaldal Engineer understands the benefits they offer, and uses these techniques eloquently. When by circumstance they are forced to write in a non-functional, mutable language, they write their code as close to a functional/immutable way as possible without severe loss of readability/performance. When reading legacy style mutable/OO code, they sigh and cringe, feeling like a security blanket has been robbed from them.
+        </p>
+        <p>
+            <strong>Antonyms:</strong> mutable free-for-all, stateful, spaghetti, fragile
+        </p>
+
+        <h2>Data flow/Data ownership/Layering</h2>
+        <p>
+            A Chaldal Engineer understands that clean and simple data flow in a cleanly layered system, and well-defined data ownership, are key to avoiding several classes of bugs, and make for robust, easy to understand and modify systems. They are conscious of what the single source of truth in the system is, and which layer in the system is responsible for what operations on the data.
+        </p>
+        <p>
+            <strong>Antonyms:</strong> lack of modularity, free-for-all, spaghetti, doing things in the wrong places
+        </p>
+    </body>
+</html>

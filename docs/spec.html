@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Chaldal Engineering Take-home Spec</title>
+
+        <style>
+            * {
+                font-family: Sans-serif;
+                color:     #444444;
+            }
+
+            p {
+                line-height: 1.3em;
+            }
+
+            p.secondary {
+                font-size: 80%;
+                color:   #999;
+            }
+
+            ul li {
+                margin:      0.7em 0;
+                line-height: 1.3em;
+            }
+
+            h1, h2 {
+                color: #31b359;
+            }
+
+            body {
+                max-width: 600px;
+                margin:    0 auto;
+            }
+
+            code {
+                font-family:      Monospace;
+                background-color: #f0f0f0;
+                padding:          0.3em 0.6em;
+            }
+
+            code.block {
+                display: block;
+                padding: 10px;
+                margin:  0.7em 0;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Meta</h1>
+        <h2>Purpose</h2>
+        <p>
+            Thank you for your interest in joining our team. We need to evaluate
+        </p>
+        <ul>
+            <li>how well candidates can think and meta-think about problems they are presented with</li>
+            <li>how proficient the candidates are at building large-scale software systems, in terms of</li>
+            <ul>
+                <li>scalability in terms of software design</li>
+                <li>scalability in terms of function-level performance</li>
+                <li>scalability in terms of readability and maintainability</li>
+            </ul>
+            <li>how careful/caring the candidates are</li>
+        </ul>
+
+        <p>
+            Completing this take-home question will give us the data points we need to make this
+            evaluation. Thank you for the time you put into building the solution.
+        </p>
+
+        <p>
+            We strongly encourage you to read in full and understand the Chaldal Engineering Standards
+            document <code>engineering-standards.html</code>, and adjust your problem solving and
+            coding approach to match the criteria we'll be evaluating you on.
+        </p>
+
+        <h1>Task</h1>
+        <p>
+            Build a program to analyze app usage data for a hypothetical menu planning calendar app.
+            On any day, a user can plan multiple meals, and each meal may have multiple dishes. The
+            program you build will analyze how engaged users are with the app.
+        </p>
+
+        <h2>Style</h2>
+        <p>
+            There are many ways to write such a program. When choosing your style, imagine that you are
+            building a system that will evolve to handling many more features in the very near future,
+            so structure your code in a way that would support such a future.
+        </p>
+
+        <h2>Language</h2>
+        <p>
+            Use a language of your choice. Include instructions to get from unzipping to runnable state,
+            including details of what OS/version your code is meant to be run on.
+        </p>
+        <p class="secondary">
+            NOTE: Some candidates chose to code their solution in "the language I've wanted to play with for a
+            while but never had a chance to". We do not recommend this. We want to see the candidate's coding
+            skills (naming, layout, design, readability, use of libraries, idioms, best practices) at their
+            absolute best, and using a new and unfamiliar language is unlikely to produce optimal results,
+            unless the candidate spends far more time on this question (to learn the language well) than we
+            are comfortable asking for.
+        </p>
+
+        <h2>Data</h2>
+        <p>
+            In the <code>./data</code> folder, you will find a bunch of files in the form <code>userId.json</code>.
+            They contain app data for a bunch of users. The structure should be fairly obvious upon examination.
+        </p>
+
+        <h2>Output</h2>
+        <p>
+            <code class="block">
+            ./dist/run active 2016-09-01 2016-09-08
+        </code>
+        <p>
+            should result in a list of comma- separated user ids that were “active” during the specified period,
+            where “active” means they had at least 5 meals.
+        </p>
+        <code class="block">
+            ./dist/run superactive 2016-09-01 2016-09-08
+        </code>
+        <p>
+            should result in a list of comma- separated user ids that were “super-active” during the specified
+            period, which means they had more than 10 meals.
+        </p>
+        <code class="block">
+            ./dist/run bored 2016-09-01 2016-09-08
+        </code>
+        <p>
+            should result in a list of comma- separated user ids that were “bored” during the specified period,
+            meaning that they were “active” in the preceding period, but didn’t make the “active” threshold in
+            the specified period.
+        </p>
+
+        <h2>Assumptions</h2>
+        <p>
+            Please explicitly state any assumptions you make.
+        </p>
+
+        <h2>Clarifications</h2>
+        <p>
+            Feel free to email for clarifications if something is unclear.
+        </p>
+
+        <h2>Submission</h2>
+        <p>
+            Please submit a tarball containing the code, data, build instructions, and whatever else
+            you deem necessary to help us reach our stated evaluation goals.
+        </p>
+
+        <h2>Expected Amount of Work</h2>
+        <p>
+            We expect this work to be completed in about 3 to 4 hours. If it starts looking like it will take
+            longer than that, possibly your coding speed is slower than we were hoping for. Speed is only one
+            facet of building software, and we’d love to evaluate as many facets as we can in this exercise,
+            but do not want to cost you any more time beyond what we expect and thus consider reasonable.
+        </p>
+
+        <p>
+            So, if 2 hours into it you think you’ll run way overtime, please cut scope, in a way that maximizes
+            your chance of demonstrating the things listed in the “purpose” section of this document. Having
+            some runnable code is better than having a bunch of code that doesn’t run.
+        </p>
+    </body>
+</html>
