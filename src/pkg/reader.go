@@ -40,7 +40,7 @@ func (reader JSONReader) Read(filepath string) *Activity {
 	raw := RawActivity{}
 
 	file, _ := ioutil.ReadFile(filepath)
-	// Assumptions 9: JSON is always valid
+	// Assumptions 9. JSON is always valid
 	json.Unmarshal(file, &raw)
 
 	days := make(map[int]time.Time)
@@ -53,8 +53,8 @@ func (reader JSONReader) Read(filepath string) *Activity {
 	}
 
 	for _, day := range raw.Calendar.MealDayMap {
-		// Assumption 6: Meal ids appearing in the meal to day map are valid
-		// Assumption 7: Meal can have 0 or more dishes
+		// Assumption 6. Meal ids appearing in the meal to day map are valid
+		// Assumption 7. Meal can have 0 or more dishes
 		if _, exists := meals[days[day]]; exists {
 			meals[days[day]]++
 		} else {
