@@ -79,13 +79,13 @@ func newBoredQuery(starts, ends time.Time) *boredQuery {
 	return &boredQuery{newTimedActivityPredicate(starts, ends), newTimedActivityPredicate(starts.Add(-d), ends.Add(-d))}
 }
 
-func (c activeQuery) Apply(directory string) []string {
+func (q activeQuery) Apply(directory string) []string {
 	var users []string
 
 	w := NewWorker(NewJSONReader())
 
 	for activity := range w.process(directory) {
-		count := c.period.Evaluate(&activity)
+		count := q.period.Evaluate(&activity)
 		log.Println(activity.UserID, count)
 
 		if count >= 5 {
@@ -96,13 +96,13 @@ func (c activeQuery) Apply(directory string) []string {
 	return users
 }
 
-func (c superActiveQuery) Apply(directory string) []string {
+func (q superActiveQuery) Apply(directory string) []string {
 	var users []string
 
 	w := NewWorker(NewJSONReader())
 
 	for activity := range w.process(directory) {
-		count := c.period.Evaluate(&activity)
+		count := q.period.Evaluate(&activity)
 		log.Println(activity.UserID, count)
 
 		if count > 10 {
@@ -113,17 +113,17 @@ func (c superActiveQuery) Apply(directory string) []string {
 	return users
 }
 
-func (c boredQuery) Apply(directory string) []string {
+func (q boredQuery) Apply(directory string) []string {
 	var users []string
 
 	w := NewWorker(NewJSONReader())
 
 	for activity := range w.process(directory) {
-		count := c.period.Evaluate(&activity)
+		count := q.period.Evaluate(&activity)
 		log.Println(activity.UserID, count)
 
 		if count < 5 {
-			precedingCount := c.preceding.Evaluate(&activity)
+			precedingCount := q.preceding.Evaluate(&activity)
 			log.Println(activity.UserID, precedingCount)
 
 			if precedingCount >= 5 {
