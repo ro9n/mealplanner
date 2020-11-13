@@ -12,6 +12,7 @@ NOTE The following assumptions are also listed in the code as comments and they 
 7. Meal can have 0 or more dishes
 8. Filename will always represent a valid user id
 9. JSON is always valid
+10. active during preceding period means greater eq 5 meals
 
 # Environment
 The solution is written in Go v1.15 using gomodules on an UNIX OS, for installation please refer to https://golang.org/doc/install

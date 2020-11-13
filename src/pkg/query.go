@@ -126,6 +126,7 @@ func (q boredQuery) Apply(directory string) []string {
 			precedingCount := q.preceding.Evaluate(&activity)
 			log.Println(activity.UserID, precedingCount)
 
+			// Assumption 10. active during preceding period means greater eq 5 meals
 			if precedingCount >= 5 {
 				users = append(users, activity.UserID)
 			}
