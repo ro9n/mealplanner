@@ -29,7 +29,7 @@ Assuming you are is the `src` directory, run the following command to build
 1. CLI sends query to main
 2. main creates a query context based on activity level and passes in the date range
 3. context is applied on data directory
-  3.1. the apply call is delegated to underlying context: activeContext, superActiveContext, boredContext each have their own apply implementation
-  3.2. worker receives directory, pulls file with the help of reader, then reads files and creates activity for each one
-  3.3. for each activity, context verifies whether it complies or not and selects users who qualify
+  1. the apply call is delegated to underlying context: activeContext, superActiveContext, boredContext each have their own apply implementation
+  2. worker receives directory, pulls file with the help of reader, then reads files and creates activity for each one
+  3. for each activity, context verifies whether it complies or not and selects users who qualify
 4. main receives a list of users and prints on stdout
